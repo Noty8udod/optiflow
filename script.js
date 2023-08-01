@@ -1,20 +1,12 @@
 let mainContent;
 let guideContent;
-let backButton;
-let lightModeButton = document.getElementById('light-mode-button');
-let clickCounter = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
   mainContent = document.querySelector('.container');
   guideContent = document.createElement('div');
   guideContent.style.display = 'none';
+  guideContent.style.overflow = 'hidden';
   document.body.appendChild(guideContent);
-
-  backButton = document.createElement('button');
-  backButton.textContent = 'Back';
-  backButton.onclick = goBack;
-  backButton.style.display = 'none';
-  document.body.appendChild(backButton);
 
   const links = document.querySelectorAll('table a');
   links.forEach(link => {
@@ -25,18 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function loadGuide(url) {
-  guideContent.innerHTML = `<iframe src="${url}" style="border: none; width: 100%; height: 100vh;"></iframe>`;
+async function loadGuide(url) {
+  const response = await fetch(url);
+  const text = await response.text();
+  guideContent.innerHTML = text;
   guideContent.style.display = 'block';
-  backButton.style.display = 'block';
   mainContent.style.display = 'none';
 }
 
 function goBack() {
   guideContent.style.display = 'none';
-  backButton.style.display = 'none';
   mainContent.style.display = 'block';
 }
+
+let clickCounter = 0;
+const lightModeButton = document.getElementById('light-mode-button');
 
 function toggleMode() {
   const body = document.body;
@@ -47,13 +42,9 @@ function toggleMode() {
     body.classList.add('light-mode');
     lightModeButton.textContent = 'Light Mode';
   }
-
   clickCounter++;
-
-  if (clickCounter === 10) {
-    body.style.background = 'linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)';
-    body.style.backgroundSize = '100%';
-    body.style.backgroundRepeat = 'repeat';
-    clickCounter = 0;
+  if (clickCounter >= 10) {
+    body.style.background = 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)';
+    clickCounter = 0; // reset the counter
   }
 }
