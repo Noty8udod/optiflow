@@ -1,12 +1,11 @@
+let mainContent;
+let guideContent;
+let clickCounter = 0;
+
 document.addEventListener('DOMContentLoaded', () => {
   const lightModeButton = document.getElementById('light-mode-button');
   lightModeButton.style.display = 'block'; // This line shows the button on the main page
 
-});
-let mainContent;
-let guideContent;
-
-document.addEventListener('DOMContentLoaded', () => {
   mainContent = document.querySelector('.container');
   guideContent = document.createElement('div');
   guideContent.style.display = 'none';
@@ -20,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
       loadGuide(event.target.href);
     });
   });
+
+  lightModeButton.addEventListener('click', toggleMode);
 });
 
 async function loadGuide(url) {
@@ -34,9 +35,6 @@ function goBack() {
   guideContent.style.display = 'none';
   mainContent.style.display = 'block';
 }
-
-let clickCounter = 0;
-const lightModeButton = document.getElementById('light-mode-button');
 
 function toggleMode() {
   const body = document.body;
