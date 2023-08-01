@@ -133,3 +133,8 @@ body.light-mode table a {
 body.light-mode .container > p > a {
   color: blue;
 }
+
+#back-button {
+    display: none;
+}
+
