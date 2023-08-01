@@ -134,3 +134,6 @@ body.light-mode table a {
 body.light-mode .container > p > a {
   color: blue;
 }
+#light-mode-button {
+  display: none;
+}
