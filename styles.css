@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: #ddd;
+}
+
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.rainbow-mode {
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  background-size: 100% 100%;
+  color: #ffffff;
+}
+
+body.rainbow-mode a {
+  color: #ffffff;
+}
+
+body.rainbow-mode .container > p > a {
+  color: #ffffff;
+}
+
+body.rainbow-mode #light-mode-button {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.rainbow-mode table a {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.container {
+  max-width: 1000px; /* Increased container width */
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px; /* Increased h2 font size */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+}
+
+p {
+  text-align: left;
+  font-size: 18px; /* Increased paragraph font size */
+  line-height: 1.6; /* Increased line-height for better readability */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+}
+
+th, td {
+  padding: 20px; /* Increased padding for table cells */
+  border-bottom: 2px solid #666;
+  border-right: 2px solid rgba(120, 125, 125, 0.10);
+}
+
+th {
+  background-color: #333;
+  color: #ddd;
+  font-size: 20px; /* Increased table header font size */
+}
+
+a {
+  color: #3fc;
+  font-size: 18px; /* Increased hyperlink font size */
+}
+
+body.light-mode a {
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#light-mode-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px; /* Increased button font size */
+}
+
+body.light-mode #light-mode-button {
+  background-color: #222;
+  color: #ddd;
+}
+
+/* Separator lines */
+table {
+  border-top: 2px solid rgba(120, 125, 125, 0.10);
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+/* Warning style */
+.warning {
+  background-color: #ff6f6f;
+  color: #fff;
+  padding: 20px; /* Increased padding for warning section */
+  margin-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.warning-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* CSS for hyperlinks in the table */
+table a {
+    display: inline-block;
+    border-radius: 5px; /* Adjust as needed */
+    padding: 10px 20px; /* Adjust as needed */
+    text-align: center;
+    background-color: #3fc; /* Initial color */
+    color: white;
+    text-decoration: none;
+}
+
+body.light-mode table a {
+    background-color: blue;
+    color: white; /* Text color in light mode */
+}
+
+/* CSS for the disclaimer hyperlink */
+.container > p > a {
+    text-align: center;
+    color: #3fc; /* Initial color */
+    text-decoration: none;
+}
+
+body.light-mode .container > p > a {
+    color: blue;
+}
