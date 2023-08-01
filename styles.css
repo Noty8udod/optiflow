@@ -14,7 +14,14 @@ body.light-mode {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
 }
 
 h2 {
@@ -71,6 +78,8 @@ a:hover {
   top: 20px;
   right: 20px;
   padding: 10px 20px;
+  background-color: #f9f9f9;
+  color: #333;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -80,11 +89,6 @@ a:hover {
 body.light-mode #theme-toggle-button {
   background-color: #222;
   color: #ddd;
-}
-
-body.dark-mode #theme-toggle-button {
-  background-color: #f9f9f9;
-  color: #333;
 }
 
 table {
@@ -135,4 +139,8 @@ body.light-mode table a {
 
 body.light-mode .container > p > a {
   color: blue;
+}
+
+#back-button {
+  display: none;
 }
