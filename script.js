@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const lightModeButton = document.getElementById('light-mode-button');
+  lightModeButton.style.display = 'block'; // This line shows the button on the main page
+
+});
 let mainContent;
 let guideContent;
 
