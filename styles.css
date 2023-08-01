@@ -66,23 +66,22 @@ a:hover {
   text-decoration: underline;
 }
 
-#theme-toggle-button {
+#light-mode-button {
   position: absolute;
   top: 20px;
   right: 20px;
   padding: 10px 20px;
   background-color: #f9f9f9;
-  color: #222; /* Default color for Dark Mode */
+  color: #333;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
-  display: none; /* Hidden by default */
 }
 
-body.light-mode #theme-toggle-button {
+body.light-mode #light-mode-button {
   background-color: #222;
-  color: #f9f9f9; /* Light Mode color */
+  color: #ddd;
 }
 
 table {
