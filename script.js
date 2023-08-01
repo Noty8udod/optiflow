@@ -1,10 +1,10 @@
 let mainContent;
 let guideContent;
 let clickCounter = 0;
-let lightModeButton; // Declare the variable globally
+let lightModeButton;
 
 document.addEventListener('DOMContentLoaded', () => {
-  lightModeButton = document.getElementById('light-mode-button'); // Assign the variable here
+  lightModeButton = document.getElementById('light-mode-button');
   lightModeButton.style.display = 'block'; // This line shows the button on the main page
 
   mainContent = document.querySelector('.container');
