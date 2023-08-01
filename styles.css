@@ -66,22 +66,25 @@ a:hover {
   text-decoration: underline;
 }
 
-#light-mode-button {
+#theme-toggle-button {
   position: absolute;
   top: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #f9f9f9;
-  color: #333;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
 }
 
-body.light-mode #light-mode-button {
+body.light-mode #theme-toggle-button {
   background-color: #222;
   color: #ddd;
+}
+
+body.dark-mode #theme-toggle-button {
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 table {
@@ -132,8 +135,4 @@ body.light-mode table a {
 
 body.light-mode .container > p > a {
   color: blue;
-}
-
-#back-button {
-    display: none;
 }
