@@ -1,25 +1,28 @@
 let clickCounter = 0;
-let lightModeButton;
 
 document.addEventListener('DOMContentLoaded', () => {
-  lightModeButton = document.getElementById('light-mode-button');
-  lightModeButton.style.display = 'block';
+  const themeToggleButton = document.getElementById('theme-toggle-button');
+  
+  // Check if a theme was previously selected
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.body.className = savedTheme;
+    themeToggleButton.textContent = savedTheme === 'light-mode' ? 'Dark Mode' : 'Light Mode';
+  }
 
-  lightModeButton.addEventListener('click', toggleMode);
+  themeToggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    if (document.body.classList.contains('light-mode')) {
+      themeToggleButton.textContent = 'Dark Mode';
+      localStorage.setItem('theme', 'light-mode');
+    } else {
+      themeToggleButton.textContent = 'Light Mode';
+      localStorage.setItem('theme', 'dark-mode');
+    }
+    clickCounter++;
+    if (clickCounter >= 10) {
+      document.body.style.background = 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)';
+      clickCounter = 0; // reset the counter
+    }
+  });
 });
-
-function toggleMode() {
-  const body = document.body;
-  if (body.classList.contains('light-mode')) {
-    body.classList.remove('light-mode');
-    lightModeButton.textContent = 'Dark Mode';
-  } else {
-    body.classList.add('light-mode');
-    lightModeButton.textContent = 'Light Mode';
-  }
-  clickCounter++;
-  if (clickCounter >= 10) {
-    body.style.background = 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)';
-    clickCounter = 0; // reset the counter
-  }
-}
