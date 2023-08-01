@@ -5,82 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Backup and Restore</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    #theme-toggle-button {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <button id="light-mode-button" onclick="toggleMode()">Dark Mode</button>
-  <button id="back-button" onclick="goBack()">Back</button>
+  <button id="theme-toggle-button" onclick="toggleTheme()">Dark Mode</button>
   <div class="container">
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Backup and Restore</title>
-        <link rel="stylesheet" href="styles.css">
-      </head>
-      <body>
-        <div class="container">
-          <h1>Backup and Restore</h1>
-          <p><a href="index.html">Back</a></p>
-          <hr>
-          <p>Hey there! If you're planning to make some changes to your PC's registry or experiment with settings, it's essential to have a safety net in place. Let me guide you on how to back up your registry and create a restore point, so you can freely optimize without worries:</p>
-          <ol>
-            <li>
-              <strong>Creating a Restore Point:</strong>
-              <ul>
-                <li>Press "Windows + R" to open the "Run" dialog.</li>
-                <li>Type "sysdm.cpl" and hit "Enter" to open "System Properties."</li>
-                <li>In the "System Properties" window, go to the "System Protection" tab.</li>
-                <li>Under "Protection Settings," select your system drive (usually C:) and click "Create."</li>
-                <li>Name the restore point (e.g., "Pre-Registry Edit Backup") and click "Create."</li>
-                <li>Windows will now create the restore point, which may take a few moments.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Backing up the Registry:</strong>
-              <ul>
-                <li>Press "Windows + R" to open the "Run" dialog.</li>
-                <li>Type "regedit" and hit "Enter" to open the Registry Editor.</li>
-                <li>In the Registry Editor, click on "File" in the top-left corner.</li>
-                <li>Choose "Export" and select a location to save the backup.</li>
-                <li>Name the backup file and make sure to choose "All" under "Export range."</li>
-                <li>Click "Save" to create the backup. Now, your registry is safely backed up!</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Restoring from Backups:</strong>
-              <ul>
-                <li><strong>Restoring Registry Backup:</strong>
-                  <ul>
-                    <li>Press "Windows + R" to open the "Run" dialog.</li>
-                    <li>Type "regedit" and hit "Enter" to open the Registry Editor.</li>
-                    <li>In the Registry Editor, click on "File" in the top-left corner.</li>
-                    <li>Choose "Import" and navigate to the location of your registry backup file.</li>
-                    <li>Select the backup file and click "Open" to restore your previous registry settings.</li>
-                  </ul>
-                </li>
-                <li><strong>Restoring from Restore Point:</strong>
-                  <ul>
-                    <li>Press "Windows + R" to open the "Run" dialog.</li>
-                    <li>Type "rstrui" and hit "Enter" to open the "System Restore" window.</li>
-                    <li>Click "Next" to view available restore points.</li>
-                    <li>Select the desired restore point (e.g., "Pre-Registry Edit Backup") and click "Next."</li>
-                    <li>Review the restore point details and click "Finish" to initiate the restoration process.</li>
-                    <li>Your system will restart, and the restore process will begin.</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ol>
-          <p>Having backups and restore points gives you the confidence to explore and optimize your PC without fear of irreversible consequences. If you encounter any issues during the restoration process or need further assistance, don't hesitate to seek help from a tech-savvy friend or a professional.</p>
-          <p>Remember, creating a restore point is essential as it allows you to revert back to your system's previous state if any issues arise during your experiments. And, always ensure you have a backup of the registry before making changes.</p>
-          <p>!!!Info Click <a href="https://support.microsoft.com/en-gb/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692#:~:text=Back%20up%20the%20registry%20manually&text=Select%20File%20%3E%20Export.,Select%20Save.)">Here</a> for up-to-date information on how to back up any windows Os registry from microsoft themselves.</p>
-          <p>If you're uncertain about any step or need extra guidance, don't hesitate to reach out to a tech-savvy friend or a professional.</p>
-        </div>
-        <script src="script.js"></script>
-      </body>
-      </html>
-
+    <h1>Backup and Restore</h1>
+    <p><a href="index.html">Back</a></p>
+    <hr>
+    <p>Hey there! If you're planning to make some changes to your PC's registry or experiment with settings, it's essential to have a safety net in place. Let me guide you on how to back up your registry and create a restore point, so you can freely optimize without worries:</p>
+    <ol>
+      <li>
+        <strong>Creating a Restore Point:</strong>
+        <ul>
+          <li>Press "Windows + R" to open the "Run" dialog.</li>
+          <li>Type "sysdm.cpl" and hit "Enter" to open "System Properties."</li>
+          <li>In the "System Properties" window, go to the "System Protection" tab.</li>
+          <li>Under "Protection Settings," select your system drive (usually C:) and click "Create."</li>
+          <li>Name the restore point (e.g., "Pre-Registry Edit Backup") and click "Create."</li>
+          <li>Windows will now create the restore point, which may take a few moments.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Backing up the Registry:</strong>
+        <ul>
+          <li>Press "Windows + R" to open the "Run" dialog.</li>
+          <li>Type "regedit" and hit "Enter" to open the Registry Editor.</li>
+          <li>In the Registry Editor, click on "File" in the top-left corner.</li>
+          <li>Choose "Export" and select a location to save the backup.</li>
+          <li>Name the backup file and make sure to choose "All" under "Export range."</li>
+          <li>Click "Save" to create the backup. Now, your registry is safely backed up!</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Restoring from Backups:</strong>
+        <ul>
+          <li><strong>Restoring Registry Backup:</strong>
+            <ul>
+              <li>Press "Windows + R" to open the "Run" dialog.</li>
+              <li>Type "regedit" and hit "Enter" to open the Registry Editor.</li>
+              <li>In the Registry Editor, click on "File" in the top-left corner.</li>
+              <li>Choose "Import" and navigate to the location of your registry backup file.</li>
+              <li>Select the backup file and click "Open" to restore your previous registry settings.</li>
+            </ul>
+          </li>
+          <li><strong>Restoring from Restore Point:</strong>
+            <ul>
+              <li>Press "Windows + R" to open the "Run" dialog.</li>
+              <li>Type "rstrui" and hit "Enter" to open the "System Restore" window.</li>
+              <li>Click "Next" to view available restore points.</li>
+              <li>Select the desired restore point (e.g., "Pre-Registry Edit Backup") and click "Next."</li>
+              <li>Review the restore point details and click "Finish" to initiate the restoration process.</li>
+              <li>Your system will restart, and the restore process will begin.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <p>Having backups and restore points gives you the confidence to explore and optimize your PC without fear of irreversible consequences. If you encounter any issues during the restoration process or need further assistance, don't hesitate to seek help from a tech-savvy friend or a professional.</p>
+    <p>Remember, creating a restore point is essential as it allows you to revert back to your system's previous state if any issues arise during your experiments. And, always ensure you have a backup of the registry before making changes.</p>
+    <p>!!!Info Click <a href="https://support.microsoft.com/en-gb/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692#:~:text=Back%20up%20the%20registry%20manually&text=Select%20File%20%3E%20Export.,Select%20Save.)">Here</a> for up-to-date information on how to back up any windows Os registry from microsoft themselves.</p>
+    <p>If you're uncertain about any step or need extra guidance, don't hesitate to reach out to a tech-savvy friend or a professional.</p>
   </div>
   <script src="script.js"></script>
 </body>
