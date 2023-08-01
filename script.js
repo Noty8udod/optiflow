@@ -1,11 +1,11 @@
 let mainContent;
 let guideContent;
 let clickCounter = 0;
-let lightModeButton;
+let themeToggleButton;
 
 document.addEventListener('DOMContentLoaded', () => {
-  lightModeButton = document.getElementById('light-mode-button');
-  lightModeButton.style.display = 'block'; // This line shows the button on the main page
+  themeToggleButton = document.getElementById('theme-toggle-button');
+  themeToggleButton.style.display = 'block'; // This line shows the button on the main page
 
   mainContent = document.querySelector('.container');
   guideContent = document.createElement('div');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  lightModeButton.addEventListener('click', toggleMode);
+  themeToggleButton.addEventListener('click', toggleTheme);
 });
 
 async function loadGuide(url) {
@@ -37,14 +37,18 @@ function goBack() {
   mainContent.style.display = 'block';
 }
 
-function toggleMode() {
+function toggleTheme() {
   const body = document.body;
   if (body.classList.contains('light-mode')) {
     body.classList.remove('light-mode');
-    lightModeButton.textContent = 'Dark Mode';
+    themeToggleButton.textContent = 'Dark Mode';
+    themeToggleButton.style.backgroundColor = '#222';
+    themeToggleButton.style.color = '#ddd';
   } else {
     body.classList.add('light-mode');
-    lightModeButton.textContent = 'Light Mode';
+    themeToggleButton.textContent = 'Light Mode';
+    themeToggleButton.style.backgroundColor = '#f9f9f9';
+    themeToggleButton.style.color = '#333';
   }
   clickCounter++;
   if (clickCounter >= 10) {
