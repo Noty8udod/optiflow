@@ -72,7 +72,7 @@ a:hover {
   right: 20px;
   padding: 10px 20px;
   background-color: #f9f9f9;
-  color: #333;
+  color: #222; /* Default color for Dark Mode */
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -82,7 +82,7 @@ a:hover {
 
 body.light-mode #theme-toggle-button {
   background-color: #222;
-  color: #ddd;
+  color: #f9f9f9; /* Light Mode color */
 }
 
 table {
