@@ -66,7 +66,7 @@ a:hover {
   text-decoration: underline;
 }
 
-#light-mode-button {
+#theme-toggle-button {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -77,9 +77,10 @@ a:hover {
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
+  display: none; /* Hidden by default */
 }
 
-body.light-mode #light-mode-button {
+body.light-mode #theme-toggle-button {
   background-color: #222;
   color: #ddd;
 }
@@ -137,4 +138,3 @@ body.light-mode .container > p > a {
 #back-button {
     display: none;
 }
-
