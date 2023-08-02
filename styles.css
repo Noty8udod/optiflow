@@ -151,7 +151,7 @@ body.light-mode .container > p > a {
 }
 
 #backup-and-restore ol > li:before {
-  content: counters(item, ".") ". ";
+  content: "" ". ";
   counter-increment: item;
   color: #3fc;
 }
