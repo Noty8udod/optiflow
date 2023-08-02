@@ -144,3 +144,29 @@ body.light-mode .container > p > a {
 #back-button {
   display: none;
 }
+#backup-and-restore {
+  line-height: 1.6;
+}
+
+#backup-and-restore ol {
+  counter-reset: item;
+}
+
+#backup-and-restore ol > li {
+  margin: 20px 0;
+}
+
+#backup-and-restore ol > li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+  color: #3fc;
+}
+
+#backup-and-restore a {
+  color: #3fc;
+  text-decoration: underline;
+}
+
+body.light-mode #backup-and-restore a {
+  color: blue;
+}
