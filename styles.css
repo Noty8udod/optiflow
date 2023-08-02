@@ -142,20 +142,6 @@ body.light-mode .container > p > a {
   line-height: 1.6;
 }
 
-#backup-and-restore ol {
-  counter-reset: item;
-}
-
-#backup-and-restore ol > li {
-  margin: 20px 0;
-}
-
-#backup-and-restore ol > li:before {
-  content: counters(item, ".") ". ";
-  counter-increment: item;
-  color: #3fc;
-}
-
 #backup-and-restore a {
   color: #3fc;
   text-decoration: underline;
