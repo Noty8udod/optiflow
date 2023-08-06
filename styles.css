@@ -63,7 +63,7 @@ body.light-mode a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #theme-toggle-button {
@@ -144,7 +144,7 @@ body.light-mode .container > p > a {
 
 #backup-and-restore a {
   color: #3fc;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 body.light-mode #backup-and-restore a {
